@@ -1,0 +1,197 @@
+a{ text-decoration:none} 
+
+body {
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+body {
+  background-color: rgb(240, 245, 247);
+    text-align: center;
+}
+
+.logocenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(43, 114, 207);
+  overflow: auto;
+}
+
+.rightcorner{
+  position: absolute;
+  top: 35px;
+  right: 16px;
+  font-size: 22px;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 14px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #009c34;
+}
+
+.Inactive{
+  cursor: not-allowed;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.rightbox{font: normal 0.8em georgia;
+	letter-spacing: 1px; 
+	margin-bottom: 100; 
+	
+    opacity:0.8;
+    position:fixed;
+    left: 600px;
+    right: 100px;
+    }
+.righthead{ 
+	font: normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: rgb(43, 114, 207);
+	}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+.pd1{
+  float: left;
+  position: relative;
+  left: 100px;
+  padding: 19px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.pd2{
+  float: left;
+  position: relative;
+  left: 280px;
+  padding: 19px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pd3{
+  float: left;
+  position: relative;
+  left: 460px;
+  padding: 19px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pd4{
+  float: left;
+  position: relative;
+  left: 660px;
+  padding: 19px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pd5{
+  float: left;
+  position: relative;
+  left: 850px;
+  padding: 19px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.discount{
+  color: red;
+  font-size: 15px;
+}
+#main{
+    text-align: center;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

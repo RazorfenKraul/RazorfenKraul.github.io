@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="stylecart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML">
+    </head>
+    <style>
+
+        h1 {
+          position: relative;
+          top: 30px;
+          left: 100px;
+          font-size: 24px;
+        }
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted black;
+            text-align: center;
+        }
+
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 120px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+        }
+
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+        }
+        .tooltip .tooltiptext   {
+          width: 800px;
+          top: 100%;
+          left: 50%;
+          margin-left: -400px; /* Use half of the width (120/2 = 60), to center the tooltip */
+        }
+
+    </style>
+    <header>
+        <img src= "images/logo.png" alt="logo" height= "60" class="logocenter"/>
+        <pre></pre>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="rightcorner ">
+         <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+         <a href="login.html"><i class="fa fa-fw fa-user"></i> Log In</a>
+        </div>
+        <!-- navBar -->
+      <div class="navbar">
+        <a class="Inactive"><i class="fa fa-fw fa-home"></i>Home</a>
+         <a class="" href="Final_Home.html"><i class="fa fa-gift"></i> Deals</a>
+         <a class="Inactive">Motors</a>
+         <a class="Inactive">Electronics</a>
+         <a class="Inactive">Collectibles & Art</a>
+         <a class="Inactive">Home & Garden</a>
+         <a class="Inactive">Clothing & Accessories</a>
+         <a class="Inactive">Toys</a>
+         <a class="Inactive">Sporting Goods</a>
+         <a class="Inactive">Business & Industrial</a>
+         <a class="Inactive">Jewelry & Watches</a>
+
+        </div>
+    </header>
+    <body>
+        <br>
+        <hr>
+        <h2 style="text-align: center">Your Cart</h2>
+        <hr>
+        <div class="tooltip">Sennheiser $2,000
+          <span class="tooltiptext"><div><img src="images/sennheiser.jpg" width="100" height="100"></div>With these groundbreaking closed dynamic headphones passionate music lovers can now enjoy their music at an audiophile level wherever they please, at home or on the move. Featuring unique glass transducer covers that minimize resonances, the HD 820 are simply the most transparent-sounding closed headphones in the world, extending the boundaries of what has been achieved in sound reproduction with closed type headphones up to now.</span>
+        </div>
+        <div>
+            <input type="button" value="+" id="b1" class="button">
+            <input type="button" value="-" id="m1" class="button">
+            <input type="button" value="Clear" id="r1" class="button">
+            <p>Quantity: <span id="q1">0</span></p>
+        </div>
+        <div class="tooltip">Lenovo IdeaPad $1,050
+          <span class="tooltiptext"><div><img src="images/laptop.jpg" width="100" height="100"></div>With these groundbreaking closed dynamic headphones passionate music lovers can now enjoy their music at an audiophile level wherever they please, at home or on the move. Featuring unique glass transducer covers that minimize resonances, the HD 820 are simply the most transparent-sounding closed headphones in the world, extending the boundaries of what has been achieved in sound reproduction with closed type headphones up to now.</span>
+        </div>
+        <div>             
+            <input type="button" value="+" id="b2" class="button">
+            <input type="button" value="-" id="m2" class="button">
+            <input type="button" value="Clear" id="r2" class="button">
+            <p>Quantity: <span id="q2">0</span></p>
+        </div>
+        <div class="tooltip">DJI Quadcopter Drone $1,240
+          <span class="tooltiptext"><div><img src="images/drone.jpg" width="100" height="100"></div>Dive into adrenaline-filled action with the DJI FPV quadcopter drone. It includes a dedicated camera that captures videos in up to 4K resolution and up to 120fps and a remote controller that gives you the freedom to explore. With powerful propulsion, intuitive motion control, and low-latency signal transmission, this drone offers a fresh, first-person perspective to drone flying.</span>
+        </div>
+        <div>
+            <input type="button" value="+" id="b3" class="button">
+            <input type="button" value="-" id="m3" class="button">
+            <input type="button" value="Clear" id="r3" class="button">
+            <p>Quantity: <span id="q3">0</span></p>
+        </div>
+     <p>Cart Total: <span id="price">0</span></p>
+     <p>Enter Payment Amount:</p>
+     <input type="number" id="input">
+     <input type="button" value="Confirm Purchase" id="confirm">
+     <script>
+        var cart = [];
+       var p1=document.getElementById("p1");
+       var p2=document.getElementById("p2");
+       var p3=document.getElementById("p3");
+       var b1=document.getElementById("b1");
+       var b2=document.getElementById("b2");
+       var b3=document.getElementById("b3");
+       var r1=document.getElementById("r1");
+       var r2=document.getElementById("r2");
+       var r3=document.getElementById("r3");
+       var m1=document.getElementById("m1");
+       var m2=document.getElementById("m2");
+       var m3=document.getElementById("m3");
+       var confirm=document.getElementById("confirm");
+	   var counter=0;
+       var price=document.getElementById("price");
+       var payment=0;
+       var input=document.getElementById("input");
+       var c1=0;
+       var c2=0;
+       var c3=0;
+       b1.addEventListener("click", addToCart);
+       b2.addEventListener("click", addToCart);
+       b3.addEventListener("click", addToCart);
+       r1.addEventListener("click", Clear);
+       r2.addEventListener("click", Clear);
+       r3.addEventListener("click", Clear);
+       m1.addEventListener("click", removeItem);
+       m2.addEventListener("click", removeItem);
+       m3.addEventListener("click", removeItem);
+       confirm.addEventListener("click", Confirm);
+         
+       function addToCart(){
+            if(this.id=="b1"){
+            	c1+=1;
+                q1.textContent=c1;
+                counter+=2000;
+                price.textContent=counter;
+            }
+            else if(this.id=="b2"){
+            	c2+=1;
+                q2.textContent=c2;
+                counter+=1050;
+                price.textContent=counter;
+            }
+            else if(this.id=="b3"){
+            	c3+=1;
+                q3.textContent=c3;
+                counter+=1240;
+                price.textContent=counter;
+            }
+       }
+       function Confirm(){
+       		payment=input.value;
+       		if(payment<counter){
+            	alert("Payment amount is less than cart total");
+            }
+            else{
+            	alert("Purchase complete");
+            }
+       }
+         function Clear(){
+             if(this.id=="r1"){
+                counter-=c1*2000;
+            	c1=0;
+                q1.textContent=c1;
+                price.textContent=counter;
+            }
+            else if(this.id=="r2"){
+                counter-=c2*1050;
+            	c2=0;
+                q2.textContent=c2;
+                price.textContent=counter;
+            }
+            else if(this.id=="r3"){
+                counter-=c3*1240;
+            	c3=0;
+                q3.textContent=c3;
+                price.textContent=counter;
+            }
+         }
+         function removeItem(){
+             if(this.id=="m1"&c1>0){
+                counter-=2000;
+            	c1-=1;
+                q1.textContent=c1;
+                price.textContent=counter;
+            }
+            else if(this.id=="m2"&c2>0){
+                counter-=1050;
+            	c2-=1;
+                q2.textContent=c2;
+                price.textContent=counter;
+            }
+            else if(this.id=="m3"&c3>0){
+                counter-=1240;
+            	c3-=1;
+                q3.textContent=c3;
+                price.textContent=counter;
+            }
+            else{
+                alert("no item left");
+            }
+         }
+
+     </script>
+    </body>
+</html>
+
+

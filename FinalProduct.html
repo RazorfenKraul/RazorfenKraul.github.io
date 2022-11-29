@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<title>Lenovo IdeaPad</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="HTML">
+    <style>
+        body {background-size: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: white;}
+        
+        
+	#div1{position: relative;border:1px solid #0ff;width:610px; height: 460px;margin:50px auto 0;overflow: hidden;}
+	#div1 ul{position: absolute;left: 0;}
+	#div1 ul li{list-style: none;width:610px;float: left;padding: 10px;height: 460px;}
+	#div1 ul li img{width:100%;}
+        
+    </style>
+</head>
+<header>    
+
+    <img src= "images/logo.png" alt="logo" height= "60" class="logocenter"/>
+    <pre></pre>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- linkkkkkkkkkkkkkkkkkkk-->
+<div class="rightcorner ">
+  <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Log In</a>
+</div>
+
+<div class="navbar">
+     <a class="Inactive"><i class="fa fa-fw fa-home" herf="Final_Home.html"></i>Home</a>
+     <a class="active" href="Final_Home.html"><i class="fa fa-gift"></i> Deals</a>
+     <a class="Inactive">Motors</a>
+     <a class="Inactive">Electronics</a>
+     <a class="Inactive">Collectibles & Art</a>
+     <a class="Inactive">Home & Garden</a>
+     <a class="Inactive">Clothing & Accessories</a>
+     <a class="Inactive">Toys</a>
+     <a class="Inactive">Sporting Goods</a>
+     <a class="Inactive">Business & Industrial</a>
+     <a class="Inactive">Jewelry & Watches</a>
+     
+    </div>
+</header>
+<!--背景修改。-->
+<body background="images/back2.png">
+    <br/>
+    <br/>
+<!--解释段落。-->
+    <div style='position: absolute; left:700px; right:0px' class="backbox">
+    <p class="righthead">Lenovo IdeaPad</p>
+     <p class="rightbox" role="article">
+         Brand: Lenovo
+Model Number: 82K10189CC
+Web Code: 16204906
+         <br/>
+          <br/>
+         Powered by an Intel Core i3 with 8GB RAM, the Lenovo IdeaPad touchscreen laptop offers fast and efficient performance to tackle your everyday task. It has a narrow bezel 15" HD touchscreen that delivers great picture quality for both work tasks and entertainment. This laptop also comes with Dolby Audio that produces rich and clear sound for movies, music, and more.
+         <br/>
+         <br/>
+         $1,049.99<br/><br/>
+         <!-- linkkkkkkkkkkkkkkkkkkk-->
+         <a  class="textreview" href="reviewpage.html">Write your review ></a>
+         <div >
+        <img class="rightreview" src="images/greview.png" height="18.79" width="100"/> <br/><a class="stextreview" href="#">See reviews ></a>
+        </div> 
+        
+      
+         <br/>
+<!--  <div class="slenovo">
+   <!--     <img src="images/front.jpeg" height="61" width="80"/> 
+        </div>-->
+        <form class="rightbox" action="http://vip.biancheng.net/login.php" method="post" name="formName">
+        Customize RAM:<input type="radio" name="girl" value="girl" id="girl"><label for="girl">8gb</label>
+        <input type="radio" name="girl" value="boy" id="boy" checked="checked"><label for="boy">16gb</label>
+            <input type="radio" name="girl" value="oy" id="oy" checked="checked"><label for="oy">24gb</label>
+         
+</form>
+        
+        <!--按钮！！！-->
+         <input type="button" value="Add to Cart" id="buttoncart" class="productbutton">
+         <br/>
+        <p class="rightbox" role="article">
+        Guess you like</p>
+        <!-- linkkkkkkkkkkkkkkkkkkk-->
+        
+        <div class="bottom1">
+            <a href="FinalProduct%20H.html"> <img src="images/Hpreview.jpg" height="200" width="200"/> </a>
+            <p class="rightbox" role="article">Sennheiser $1,949.99</p>
+        
+    </div>
+        
+        <div class="bottom2">
+            <a href="FinalProductD.html"> <img src="images/Dpreview.jpeg" height="200" width="200"/> </a>
+            <p class="rightbox" role="article">DJI Quadcopter Drone $1239.99</p>
+        
+    </div>
+        
+        
+        
+    
+     
+    </p>
+    </div>
+
+<!--左边图片-->
+    <div >
+    <a >
+        <div class="pdlenovo">
+        <img src="images/oa.jpeg" height="460" width="610"/> 
+        </div>
+        </a>
+    </div>
+<!--左片-->
+    <a href="javascript:;">L</a>
+	<a href="javascript:;">R</a>
+<div id="div1" class="pddlenovo">
+	<ul>
+		<li><img src="images/o1.jpeg"></li>
+		<li><img src="images/o2.jpeg"></li>
+		<li><img src="images/o3.jpeg"></li>
+		
+		<div style="clear: none;"></div>
+	</ul>
+</div>
+    
+    
+    
+    
+<!--点击购物车-->
+    <script type="text/javascript">
+    var sbuttoncart=document.querySelector("#buttoncart");
+    
+    sbuttoncart.addEventListener("click", sdisable);
+        
+    function sdisable(){
+             this.disabled = true;
+            this.style.background='#c4c4c4';
+        alert("Add confirmed!");
+             }
+        
+        
+        
+
+        
+        window.onload=function(){
+		var oDiv=document.getElementById('div1');
+		var oUl=oDiv.getElementsByTagName('ul')[0];
+		var aLi=oUl.getElementsByTagName('li');
+		var aA=document.getElementsByTagName('a');//获取向右向左的箭头
+		var timer=null;
+		var iSpeed=10;
+		oUl.innerHTML+=oUl.innerHTML;//定义图片可以循环播放
+		oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';//定义外层ul的宽度，根据图片的个数和每个图片的宽度计算，保证总宽度是可调整的
+		function fnMove(){
+			if(oUl.offsetLeft<-oUl.offsetWidth/2){
+				oUl.style.left=0;
+			}else if(oUl.offsetLeft>0){
+				oUl.style.left=-oUl.offsetWidth/2+'px';
+			}//定义到边界的时候，实现无缝衔接
+			oUl.style.left=oUl.offsetLeft+iSpeed+'px';
+//定义图片的右边距随着速度不断不断增加，或减小，实现运动的效果
+		}
+		timer=setInterval(fnMove,100);
+		aA[0].onclick=function(){
+			iSpeed=-100;
+//按下左箭头，定义向左运动
+		}
+		aA[1].onclick=function(){
+			iSpeed=100;
+//按下右箭头，定义向右运动
+		}
+		oDiv.onmouseover=function(){
+			clearInterval(timer);
+//鼠标移动到图片上，清除定时器，停止运动
+		}
+		oDiv.onmouseout=function(){
+			timer=setInterval(fnMove,100);
+//鼠标移出，重新开启定时器，重新运动
+		}
+	};
+        
+        
+        
+    
+    </script>
+</body>
+</html>
+

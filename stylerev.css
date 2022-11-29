@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: url('images/page-bg.png');
+  background-size: cover;
+}
+
+.header-top {
+  position: relative;
+  padding: 16px;
+}
+
+.main-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.header-top .nav-items {
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.header-bottom {
+  background-color: #2B72CF;
+}
+
+.header-bottom .nav-item {
+  padding: 12px;
+}
+
+.header-bottom .nav-item a {
+  color: #fff;
+}
+
+.header-bottom i {
+  color: #fff;
+}
+
+.header-bottom .nav-item.active {
+  background-color: #009C34;
+}
+
+.header-bottom .nav-item:not(.active):hover {
+  background-color: #000;
+}
+
+.main-container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 24px;
+}
+
+.create-review-heading {
+  font-size: 24px;
+}
+
+.main-product-wrapper {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-name {
+  font-size: 20px;
+}
+
+.review-form {
+  width: 576px;
+}
+
+.review-form .form-group {
+  padding: 16px 0;
+  border-top: 1px solid #ddd;
+}
+
+.overall-rating-group {
+  position: relative;
+}
+
+.overall-rating-cb {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.overall-rating-cb.fa-star {
+  color: gold;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: #0000ffbf;
+  cursor: pointer;
+}
+
+.review-form label {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000;
+  outline: none;
+}
+
+.post-btn {
+  background-color: #D9D9D9;
+  border-radius: 0;
+  padding: 8px;
+  display: block;
+  width: 80px;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  cursor: pointer;
+}

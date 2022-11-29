@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <style>
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        *
+        {
+            box-sizing: border-box;
+        }
+        .page-container
+        {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(images/login-bg.jpg);
+            background-repeat: repeat;
+            background-size: contain;
+        }
+        .login-container
+        {
+            width: 640px;
+            height: 100vh;
+            padding-top: calc(50vh - 300px);
+            background-color: #FFFFFF;
+            margin: 0px auto;
+        }
+        .login-logo
+        {
+            display: block;
+            height: 200px;
+            margin: 0px auto 0px auto;
+        }
+        .login-input
+        {
+            display: block;
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0px auto 30px auto;
+            border: 1px solid #dcdee2;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+        .login-button
+        {
+            display: block;
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0px auto 30px auto;
+            border: none;
+            padding-left: 20px;
+            font-size: 16px;
+            background-color: #19be6b;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="login-container">
+            <img src="images/logos.png" alt="" class="login-logo">
+            <input id="inputName" class="login-input" type="text" placeholder="Enter User Name" />
+            <input id="inputPassword" class="login-input" type="password" placeholder="Enter Password" />
+            <button class="login-button" onclick="loginFunc()">LOGIN</button>
+        </div>
+    </div>
+</body>
+<script>
+    var name = "admin";
+    var password = "123456";
+
+    function loginFunc() {
+        var inputName = document.getElementById("inputName").value;
+        var inputPassword = document.getElementById("inputPassword").value;
+        if (name == inputName && password == inputPassword) {
+            alert("login success");
+            location.href = "./Final_Home.html";
+        }
+        else {
+            alert("login fail");
+        }
+    }
+</script>
+</html>
